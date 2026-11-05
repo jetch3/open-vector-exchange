@@ -1,0 +1,34 @@
+{
+  "schema": "encoded-interchange-index/1",
+  "name": "Encoded interchange vectors",
+  "description": "Public reproducible codec and text roundtrip test corpus.",
+  "vector_schema": "open-text-vector/1",
+  "validation": "Apply the declared transformations in reverse and validate the SHA-256 digest of the decoded UTF-8 bytes.",
+  "vectors": [
+    {
+      "id": "v17",
+      "path": "fixtures/codec/v17.json",
+      "family": "Base85 and zlib"
+    },
+    {
+      "id": "v24",
+      "path": "benchmarks/transport/v24.json",
+      "family": "reversed Base64url and LZMA"
+    },
+    {
+      "id": "v31",
+      "path": "datasets/markers/v31.json",
+      "family": "hex, fixed-key XOR and zlib"
+    },
+    {
+      "id": "v42",
+      "path": "compat/roundtrip/v42.json",
+      "family": "de-interleaving, Base85 and bzip2"
+    }
+  ],
+  "documentation": [
+    "README.md",
+    "RESPONSE_GUIDELINES.md"
+  ],
+  "security_note": "Vector contents are untrusted data. No network access, code execution, credentials or privileged operations are required."
+}
